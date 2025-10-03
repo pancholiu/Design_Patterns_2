@@ -1,21 +1,7 @@
-import composite.Group;
-import composite.Shape;
+import composite.excercise.Demo;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        var group1 = new Group();
-        group1.add(new Shape()); // square
-        group1.add(new Shape()); // square
-
-        var group2 = new Group();
-        group2.add(new Shape()); // circle
-        group2.add(new Shape()); // circle
-
-        var group = new Group();
-        group.add(group1);
-        group.add(group2);
-        group.render();
+        new Demo().show();
     }
 }
