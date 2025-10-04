@@ -1,10 +1,15 @@
-import adapter.excercise.GmailAdapter;
-import adapter.excercise.EmailClient;
-import com.codewithmosh.adapter.Gmail.GmailClient;
+
 import decorator.CloudStream;
+import decorator.CompressedCloudStream;
+import decorator.EncryptedCloudStream;
+import decorator.Stream;
 
 public class Main {
     public static void main(String[] args) {
-        var cloudStream = new CloudStream();
+        storeCreditCard(new CompressedCloudStream(new CloudStream()));
+    }
+
+    public static void storeCreditCard(Stream stream) {
+        stream.write("1234-1234-1234-1234");
     }
 }
