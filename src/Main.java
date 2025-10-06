@@ -1,7 +1,10 @@
-import facade.excercise.Demo;
+import flyweight.PointService;
 
 public class Main {
     public static void main(String[] args) {
-        new Demo().show();
+        var service = new PointService();
+
+        for(var point: service.getPoints())
+            point.draw();
     }
 }
