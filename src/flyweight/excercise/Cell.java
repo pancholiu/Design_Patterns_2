@@ -1,4 +1,4 @@
-package com.codewithmosh.flyweight;
+package flyweight.excercise;
 
 public class Cell {
   private final int row;

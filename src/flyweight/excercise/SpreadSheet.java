@@ -1,4 +1,4 @@
-package com.codewithmosh.flyweight;
+package flyweight.excercise;
 
 public class SpreadSheet {
   private final int MAX_ROWS = 3;

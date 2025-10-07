@@ -1,4 +1,4 @@
-package com.codewithmosh.flyweight;
+package flyweight.excercise;
 
 public class Demo {
   public static void show() {
