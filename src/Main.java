@@ -1,5 +1,6 @@
-import proxy.Ebook;
+import proxy.EbookProxy;
 import proxy.Library;
+import proxy.LoggingEbookProxy;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,7 +8,7 @@ public class Main {
         String[] fileNames = { "a", "b", "c" };
 
         for(var fileName: fileNames)
-            library.add(new Ebook(fileName));
+            library.add(new LoggingEbookProxy(fileName));
 
     library.openEbook("a");
 
