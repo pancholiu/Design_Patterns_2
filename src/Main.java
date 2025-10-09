@@ -1,17 +1,7 @@
-import proxy.EbookProxy;
-import proxy.Library;
-import proxy.LoggingEbookProxy;
+import proxy.excercise.Demo;
 
 public class Main {
     public static void main(String[] args) {
-        var library = new Library();
-        String[] fileNames = { "a", "b", "c" };
-
-        for(var fileName: fileNames)
-            library.add(new LoggingEbookProxy(fileName));
-
-    library.openEbook("a");
-
-
+        new Demo().show();
     }
 }
