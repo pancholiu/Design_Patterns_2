@@ -1,10 +1,9 @@
-package flyweight.excercise;
+package flyweight.solution;
 
 public class Cell {
   private final int row;
   private final int column;
   private String content;
-
   private CellContext context;
 
   public Cell(int row, int column, CellContext context) {
@@ -17,9 +16,13 @@ public class Cell {
     this.content = content;
   }
 
-  public CellContext getContext() { return context; }
+  public CellContext getContext() {
+    return context;
+  }
 
-  public void setContext(CellContext context) { this.context = context; }
+  public void setContext(CellContext context) {
+    this.context = context;
+  }
 
   public void render() {
     System.out.printf("(%d, %d): %s [%s]\n", row, column, content, context.getFontFamily());

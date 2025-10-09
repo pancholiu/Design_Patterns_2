@@ -1,4 +1,4 @@
-package flyweight.excercise;
+package flyweight.solution;
 
 public class Demo {
   public static void show() {

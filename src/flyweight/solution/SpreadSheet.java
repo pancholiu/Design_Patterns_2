@@ -1,13 +1,14 @@
-package flyweight.excercise;
+package flyweight.solution;
 
 public class SpreadSheet {
   private final int MAX_ROWS = 3;
   private final int MAX_COLS = 3;
-  public Cell[][] cells = new Cell[MAX_ROWS][MAX_COLS];
+  private Cell[][] cells = new Cell[MAX_ROWS][MAX_COLS];
   private CellContextFactory contextFactory;
 
   public SpreadSheet(CellContextFactory contextFactory) {
     this.contextFactory = contextFactory;
+
     generateCells();
   }
 
@@ -17,6 +18,8 @@ public class SpreadSheet {
     cells[row][col].setContent(content);
   }
 
+  // We could have a similar method font setting the fontSize or isBold
+  // for a given cell. I've omitted that here.
   public void setFontFamily(int row, int col, String fontFamily) {
     ensureCellExists(row, col);
 
@@ -41,6 +44,8 @@ public class SpreadSheet {
   }
 
   private CellContext getDefaultContext() {
+    // In a real app, these values should not be hardcoded here.
+    // They should be read from a configuration file.
     return new CellContext("Times New Roman", 12, false);
   }
 
