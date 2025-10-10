@@ -1,4 +1,4 @@
-package proxy.excercise;
+package proxy.solution;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +11,6 @@ public class DbContext {
     // to read the product with the given ID.
     System.out.printf("SELECT * FROM products WHERE product_id = %d \n", id);
 
-    // Simulate reading a product object from a database.
     var product = new ProductProxy(id, this);
     product.setName("Product 1");
 
@@ -30,5 +29,4 @@ public class DbContext {
   public void markAsChanged(Product product) {
     updatedObjects.put(product.getId(), product);
   }
-
 }
